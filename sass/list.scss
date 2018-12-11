@@ -1,0 +1,696 @@
+header{
+    background: #eee;
+    height: 30px;
+    overflow: hidden;
+    font-size: 12px; 
+}
+header .nav{
+    width: 1200px;
+    height: auto;
+    overflow: hidden;
+    margin: 0 auto;
+    // position: relative;
+}
+header .head-left{
+    display: inline-block;
+    float: left !important;
+}
+header a{
+    color: #888888;
+    text-decoration: none;
+    float: left;
+    display: block;
+    height: 32px;
+    padding: 0 22px 0 0;
+    line-height: 30px;
+    z-index: 11;
+    margin-top: -1px;
+    margin-bottom: -1px;
+    border: 1px solid #eee;
+    border-bottom:none; 
+    text-align: center;
+}
+header a:hover{
+    color: #fa1d6a
+}
+header .nav a.left-nav em {
+    background: url(../images/ibar_sprites.png) no-repeat;
+    width: 22px;
+    margin-top: 5px;
+    height: 20px;
+    display: inline-block;
+    float: left;
+    background-position: 100px 100px;
+    opacity: 0.5;
+}
+header .nav a.first em {
+    background-position: -76px -284px;
+    margin-right: 2px;
+}
+header .nav a.sed em {
+    background-position: -104px -283px;
+}
+.fr {
+    float: right !important;
+}
+header .nav .fr i {
+    display: inline-block;
+    width: 5px;
+    height: 30px;
+    background: url(../images/ibar_sprites.png) no-repeat;
+    background-position: -58px -230px;
+    float: left;
+    margin-top: 6px;
+}
+header .nav .fr a.order em {
+    background-position: -54px -255px;
+}
+
+header .nav .fr a em {
+    background: url(../images/ibar_sprites.png) no-repeat;
+    width: 20px;
+    margin-top: 5px;
+    height: 20px;
+    display: inline-block;
+    float: left;
+    background-position: 100px 100px;
+}
+header .nav img{
+    padding-top: 9px;
+    margin-right: 5px;
+    float: left;
+}
+header .nav .fr a.cart em {
+    background-position: -76px -224px;
+}
+header .nav .fr a.order em {
+    background-position: -54px -255px;
+}
+header .nav .two-code{
+    position: absolute;
+    z-index: 999;
+    height: auto;
+    border: 1px solid #d9d9d9;
+    background: #fff;
+    padding: 10px;
+    // left: 0;
+    border-top: none;
+    top:28px;
+    display: none;
+}
+header .nav .two-code p{
+    text-align: center;
+    color: #000000;
+}
+header .nav .two-code .more{
+    color: #fa1d61;
+    margin-top: 10px;
+}
+
+header .nav .first:hover{
+    background:#fff;
+    border: 1px solid #d9d9d9;
+    border-bottom: none;
+
+}
+header .nav .first:hover .two-code1{
+    display: block
+}
+header .nav .sed:hover .two-code2{
+    display: block
+}
+header .nav .three:hover .two-code3{
+    display: block
+}
+
+.top{
+    background: #FC327E;
+    height: 90px;
+    img{
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+
+
+// logo 搜索部分开始
+.header_wrap{
+    width: 1200px;
+    height: 110px;
+    margin: 0 auto;
+    .logo {
+        width: 180px;
+        float: left;
+        margin-top: 20px;
+    }
+    .search_layout {
+        width: 689px;
+        float: left;
+        margin-left: 148px;
+        margin-top: 30px;
+        .search_ul {
+            width: 436px;
+            height: auto;
+            overflow: hidden;
+            margin: 0;
+          
+        }
+    }
+}
+
+.search_ul  li.cur{
+    color: #fa1d61;
+    float: left;
+    width: 89px;
+    height: 33px;
+    line-height: 33px;
+    text-align: center;
+    font-size: 15px;
+    cursor: pointer;
+    position: relative;
+    border: 1px solid #fa1d61;
+    background: #fa1d61;
+    color: #fff;
+}
+.header_wrap .head_search{
+    background: #fa1d61;
+    width: 442px;
+    height: 40px;
+    padding: 3px;
+    border-radius: 0 2px 2px 2px;
+    float: left;
+    .form_search {
+        background: #fff;
+        height: 34px;
+    }
+   .search_ico {
+        width: 20px;
+        height: 21px;
+        float: left;
+        background: url(../images/header_search.png);
+        margin: 5px;
+    }
+    .input_text {
+        font-size: 12px;
+        color: #999;
+        outline: none;
+        height: 34px;
+        line-height: 34px;
+        float: left;
+        background-color: transparent;
+        border: medium none;
+        width: 336px;
+    }
+    .input_submit {
+        font-size: 18px;
+        color: #fff;
+        float: right;
+        background-color: #fa1d61;
+        border: medium none;
+        width: 70px;
+        height: 34px;
+        cursor: pointer;
+        outline: none;
+    }
+}
+.header_wrap .head_keywords{
+    width: 200px;
+    margin-left: 10px;
+    height: 23px;
+    float: left;
+    .ktitle_a {
+        width: 200px;
+        float: left;
+        a {
+            color: #808080;
+            text-decoration: none;
+            margin-right: 10px;
+            margin-bottom: 3px;
+            display: block;
+            float: left;
+        }
+        a:hover{
+            color:#fa1d61
+        }
+    }
+}
+.header_wrap .cart_wrap{
+    width: 131px;
+    height: 33px;
+    border: 1px solid #dcdcdc;
+    background: url(../images/cart.png) no-repeat scroll 8px center;
+    margin-top: 75px;
+    margin-left: 50px;
+    float: left;
+    font-size: 16px;
+    color: #333;
+    line-height: 33px;
+    position: relative;
+    cursor: pointer;
+    .cart_wrap_tel {
+        position: absolute;
+        margin-top: -62px;
+        line-height: 20px;
+        font-size: 12px;
+        text-align: right;
+        font-weight: 600;
+        width: 132px;
+        font {
+            font-size: 16px;
+            color: #fa1d61;
+        }
+    }
+    span {
+        font-size: 16px;
+        color: #333;
+        line-height: 33px;
+        margin-left: 36px;
+    }
+    .count {
+        font-size: 10px;
+        color: #fff;
+        width: 16px;
+        height: 16px;
+        border-radius: 8px;
+        background: #fa1d61;
+        line-height: 16px;
+        text-align: center;
+        display: inline-block;
+        right: 7px;
+        top: -9px;
+        position: absolute;
+        overflow: hidden;
+    }
+}
+.public_nav_warp{
+    height: 42px;
+    border-bottom: 2px solid #bfbfbf;
+}
+.public_nav{
+    width: 1200px;
+    margin: 0 auto;
+    .all_category {
+        width: 173px;
+        height: 40px;
+        line-height: 40px;
+        background: #fa1d61;
+        text-align: center;
+        font-size: 18px;
+        color: #fff;
+        float: left;
+        a {
+            font-size: 18px;
+            color: #fff;
+        }
+    }
+    .site_menu {
+        margin-left: 16px;
+        width: 544px;
+        float: left;
+        li.cur a {
+            color: #fa1d61;
+        }
+        li {
+            float: left;
+            padding: 0px 16px;
+            padding: 8px 15px;
+            position: relative;
+            a{
+                font-size: 18px;
+                color: #333333;
+            }
+            a:hover{
+                color: #fa1d61;
+            }
+            i {
+                position: absolute;
+                right: 0;
+                top: -9px;
+                display: block;
+                width: 29px;
+                height: 21px;
+                background: url(../images/new_gif.gif) no-repeat;
+            }
+        }
+    }
+}
+
+// 结束
+
+.banner1 {
+    width: 100%;
+    height: 188px;
+    margin: 0 auto;
+    background: url(../images/ban_1.jpg) center no-repeat;
+}
+.banner2 {
+    width: 100%;
+    height: 178px;
+    margin: 0 auto;
+    background: url(../images/ban_2.jpg) center no-repeat;
+}
+.banner3 {
+    width: 100%;
+    height: 154px;
+    margin: 0 auto;
+    background: url(../images/ban_3.jpg) center no-repeat;
+}
+
+// 轮播图结束
+
+// 过度条开始
+.lead_box {
+    width: 100%;
+    height: 57px;
+    background: url(../images/bgwhite.jpg?r=1) repeat-x;
+    text-align: center;
+    padding: 19px 0 0 0;
+}
+
+// 过度条结束
+
+// 女款生日套餐开始
+.girl_products_box {
+    width: 100%;
+    height: 630px;
+    background: #F2E0D4;
+    padding: 34px 0 0 0;
+}
+.bt_1 {
+    width: 1200px;
+    height: 91px;
+    background: url(../images/bt_1.gif) center no-repeat;
+    margin: 0 auto;
+}
+.girl_products_nk {
+    width: 1130px;
+    height: 449px;
+    margin: 36px auto 0;
+    background: url(../images/nvzhuhe.jpg) no-repeat 12px 31px;
+    background-color: #fff;
+    position: relative;
+}
+.girl_products_nk a.pic_box {
+    width: 702px;
+    height: 390px;
+    display: block;
+    position: absolute;
+    left: 14px;
+    top: 31px;
+}
+.nv_words_box {
+    width: 380px;
+    height: 300px;
+    position: absolute;
+    left: 751px;
+    top: 121px;
+}
+.nv_words_box .name {
+    width: 380px;
+    height: 51px;
+}
+.nv_words_box .name a {
+    color: #252424;
+    font-size: 30px;
+    line-height: 51px;
+    font-weight: bolder;
+}
+.nv_words_box p.wood {
+    color: #666666;
+    font-size: 16px;
+    line-height: 26px;
+}
+.nv_words_box .price {
+    width: 380px;
+    height: 37px;
+    margin: 23px 0 0 0;
+}
+.nv_words_box .price i {
+    color: #333333;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: bolder;
+    float: left;
+    margin: 12px 5px 0 0;
+}
+.nv_words_box .price span {
+    color: #333333;
+    font-size: 30px;
+    line-height: 37px;
+    float: left;
+    font-weight: bolder;
+}
+.nv_words_box .price del {
+    color: #999999;
+    font-size: 18px;
+    float: left;
+    margin: 10px 0 0 5px;
+}
+.nv_words_box a.buy {
+    width: 139px;
+    height: 36px;
+    background: #ED5910;
+    display: block;
+    border-radius: 36px;
+    text-align: center;
+    line-height: 36px;
+    color: #ffffff;
+    font-size: 18px;
+    margin: 5px 0 0 0;
+}
+// 女款生日套餐结束
+
+// 男款生日套餐开始
+.man_products_box {
+    background: url(../images/bgwhite.jpg) repeat;
+}
+.bt_2 {
+    width: 1200px;
+    height: 92px;
+    background: url(../images/bt_2.gif) center no-repeat;
+    margin: 0 auto;
+}
+.man_products_nk {
+    background: url(../images/nanzhuhe.jpg) no-repeat 323px 28px;
+    background-color: #fff;
+    position: relative;
+}
+.man_products_nk a.pic_box {
+    width: 758px;
+    height: 414px;
+    display: block;
+    position: absolute;
+    left: 321px;
+    top: 26px;
+}
+.man_products_nk .nv_words_box {
+    position: absolute;
+    left: 63px;
+    top: 120px;
+}
+// 男款生日套餐结束
+
+// 射手座特别推荐开始
+.bt_3 {
+    width: 1200px;
+    height: 56px;
+    background: url(image/bt_3.gif?r=1) center no-repeat;
+    margin: 0 auto;
+}
+.bt_3 {
+    width: 1200px;
+    height: 56px;
+    background: url(../images/bt_3.gif) center no-repeat;
+    margin: 0 auto;
+}
+.recommend_nk {
+    width: 872px;
+    height: 488px;
+    margin: 60px auto 0;
+    position: relative;
+}
+.recommend_nk a.pic {
+    width: 475px;
+    height: 475px;
+    position: absolute;
+    left: 10px;
+    top: 0;
+    display: block;
+    z-index: 300;
+}
+.recommend_nk .details {
+    width: 268px;
+    height: 238px;
+    background: url(../images/tebie_2.jpg) no-repeat;
+    position: absolute;
+    left: 554px;
+    top: 10px;
+}
+.recommend_nk .special_words_box {
+    position: absolute;
+    left: 554px;
+    top: 307px;
+}
+.special_words_box a.name {
+    color: #333333;
+    font-size: 24px;
+    line-height: 51px;
+    font-weight: bolder;
+}
+.special_words_box p.wood {
+    color: #666666;
+    font-size: 16px;
+    line-height: 18px;
+}
+
+.special_words_box .price {
+    width: 100%;
+    height: 38px;
+    margin: 13px 0 0 0;
+}
+.special_words_box .price i {
+    color: #333333;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: bolder;
+    float: left;
+    margin: 12px 5px 0 0;
+}
+.special_words_box .price span {
+    color: #333333;
+    font-size: 30px;
+    line-height: 37px;
+    float: left;
+    font-weight: bolder;
+}
+.special_words_box a.buy {
+    width: 139px;
+    height: 36px;
+    background: #ED5910;
+    display: block;
+    border-radius: 36px;
+    text-align: center;
+    line-height: 36px;
+    color: #ffffff;
+    font-size: 18px;
+    margin: 5px 0 0 0;
+}
+
+
+// 列表开始
+.floor{
+    width: 1200px;
+    margin: 0 auto;
+    background: #FBFBFB;
+    padding: 47px 0 0 0;
+    .list_title{
+        width: 1200px;
+        height: 63px;
+        background: url(../images/bt_4.gif) center no-repeat;
+        margin: 0 auto;
+    }
+}
+
+.floor_list{
+    width: 226px;
+    height: 378px;
+    float: left;
+    margin: 50px 9px 20px 5px;
+    a.pic {
+        width: 225px;
+        height: 263px;
+        display: block;
+        margin: 0 auto;
+    }
+    a.name {
+        font-size: 18px;
+        color: #333;
+        width: 200px;
+        display: block;
+        height: 46px;
+        line-height: 46px;
+        margin: 0 auto;
+        font-weight: bolder;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    p.wood {
+        font-size: 14px;
+        color: #666;
+        width: 200px;
+        display: block;
+        height: 18px;
+        line-height: 18px;
+        margin: 0 auto;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .goumai_box {
+        font-size: 21px;
+        color: #333;
+        width: 200px;
+        display: block;
+        height: 30px;
+        line-height: 30px;
+        text-align: right;
+        margin: 10px auto 0;
+        .price {
+            float: left;
+            font-weight: bolder;
+            i {
+                font-size: 16px;
+              font-style: normal; 
+            }
+            span {
+                font-size: 21px;
+                font-style: normal;
+            }
+        }
+        a.buy {
+            width: 92px;
+            height: 28px;
+            display: block;
+            line-height: 28px;
+            text-align: center;
+            float: right;
+            background: #ED5910;
+            color: #fff;
+            border-radius: 30px;
+            font-size: 14px;
+        }
+    }
+}
+.list_title2{
+    width: 1200px;
+    height: 56px;
+    background: url(../images/bt_5.gif) center no-repeat;
+    margin: 0 auto;
+}
+.floor1{
+    background: #FBFBFB;
+}
+.floor2{
+    background: #E0EAF4
+}
+
+.list_title3 {
+    width: 1200px;
+    height: 54px;
+    background: url(../images/bt_6.gif) center no-repeat;
+    margin: 0 auto;
+}
+.bottom_box {
+    width: auto;
+    height: 169px;
+    background: #FBFBFB;
+}
+.sy_more {
+    width: auto;
+    height: 81px;
+    display: block;
+    background: url(../images/more.gif) no-repeat center;
+    margin: 0 auto;
+}

@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "@babel/core": "^7.2.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.7.0",
+    "gulp-sass-china": "^3.1.0",
+    "gulp-uglify": "^3.0.1",
+    "http-proxy-middleware": "^0.19.1"
+  }
+}

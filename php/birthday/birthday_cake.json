@@ -1,0 +1,42 @@
+[{
+    "id":11,
+    "img":"http://ahj.cm/data/images/special/topic_107/image/dg_1.jpg",
+    "title":"Lion King 新狮子王 6寸 ",
+    "name":"进口蓝莓果酱、进口安佳淡奶油、奶酪",
+    "price":"198.00"
+    
+},
+    
+    {
+    "id":12,
+    "img":"http://ahj.cm/data/images/special/topic_107/image/dg_2.jpg",
+    "title":"幸福味蕾 8寸 ",
+    "name":"鲜奶水果蛋糕，各种新鲜水果装饰，巧克力片包围搭配",
+    "price":"188.00"
+    
+},
+{
+    "id":13,
+    "img":"http://ahj.cm/data/images/special/topic_107/image/dg_3.jpg",
+    "title":"爱的勇气 8寸 ",
+    "name":"鲜奶水果心形蛋糕，上面一层时令水果，杏仁片包围搭配",
+    "price":"178.00"
+    
+},
+    
+    {
+    "id":14,
+    "img":"http://ahj.cm/data/images/special/topic_107/image/dg_4.jpg",
+    "title":"希望的原野 8寸 ",
+    "name":"鲜奶水果蛋糕，新鲜水果装饰，杏仁片搭配",
+    "price":"169.00"
+    
+},
+{
+    "id":15,
+    "img":"http://ahj.cm/data/images/special/topic_107/image/dg_5.jpg",
+    "title":"松露巧克力 6寸 ",
+    "name":"进口安佳动物奶油、进口防潮可可粉、进口巧克力豆、进口黑巧克力",
+    "price":"198.00"
+    
+}]
