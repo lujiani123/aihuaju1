@@ -808,7 +808,8 @@ header .nav .three:hover .two-code3 {
   background-color: #fffaf6;
   background-image: url(../images/florist_bg.png);
   background-repeat: no-repeat;
-  background-size: contain; }
+  background-size: contain;
+  height: 325px; }
   .florist-wrapper .left {
     width: 35%;
     float: left; }

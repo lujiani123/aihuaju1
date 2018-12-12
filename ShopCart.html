@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>爱花居-购物车</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/ShopCart.css">
+</head>
+<body>
+          <!-- 头部导航开始-->
+   <header>
+    <div class="nav">
+              
+               
+        <span class="head-left">
+            <a href="#" class="left-nav first ">
+                <em></em>
+                关注爱花居花店微信
+                <div class="two-code1 two-code">
+                        <img class="" src="http://ahj.cm/h/templates/hua/images/old_ahj_wx.jpg"/>
+                        <p class="more">获得更多惊喜</p>
+                        <p class="follow">扫描关注爱花居花店微信</p>
+                </div>
+                
+            </a>
+            <a href="#" class="left-nav sed first">
+                <em></em>
+                下载花店手机APP
+                 
+                <div class="two-code2 two-code">
+                        <img class="" src="http://ahj.cm/h/templates/hua/images/app_ahj_erweima.png"/>
+                        <p class="more">获得更多惊喜</p>
+                        <p class="follow">扫描关注爱花居花店微信</p>
+                    </div>
+                </a>
+            </span>
+            <span class="fr userbartop"> 
+                <a href="#">欢迎来到爱花居首页</a>
+                <i></i>
+                <a href="#">登录</a>
+                <i></i>
+                <a href="#" >注册</a>
+                <i></i>
+                <a class="cart" href="ShopCart.html" >
+                    <em></em>
+                    我的购物车
+                </a>
+                <i></i>
+                <a class="order first three " href="#">
+                    <em></em>
+                    订单查询
+                    <div class="two-code3 two-code">
+                            <img class="" src="http://ahj.cm/h/templates/hua/images/searqde.png" width="145" height="154"/>
+                            <p class="more">获得更多惊喜</p>
+                            <p class="follow">扫描关注爱花居花店微信</p>
+                    </div>
+                </a>
+                <i></i>
+                <a  href="#">
+                    <img src="http://ahj.cm/h/templates/hua/images/bukuan.png" width="14"> 
+                    在线补款
+                </a>
+                <i></i>
+                <a href="#" id="complaint">
+                    <img src="http://ahj.cm/h/templates/hua/images/toushu.png" width="15">
+                    意见建议
+                </a>
+            </span>
+        </div>
+
+    </header>
+
+<!-- 头部导航结束 -->
+
+<!-- logo部分 -->
+    <div class="header_top">
+        <div class="header_top_m">
+            <div class="logo">
+                <a href="/" rel="nofollow">
+                    <img src="http://www.aihuaju.com/h/templates/hua/images/aihuaju_log.jpg">
+                </a>
+            </div>
+            <div class="fr mr_t24">
+                <img src="http://ahj.cm/h/templates/hua/images/_r2_c2.jpg" width="463" height="45" class="buy_step_img">
+                <ul class="buy_step_list">
+                    <li>购物车</li>
+                    <li>提交订单</li>
+                    <li>支付</li>
+                    <li>完成</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 购物车列表 -->
+    <div class="shopping_box">
+        <div class="shopping_header">
+            <ul>
+                <li class="cur pd_l0"><a href="" >全部商品（1                            ）</a></li>
+                <li class="border_r_n"><a href="">优惠（0）</a>
+                </li>
+            </ul>
+        </div>
+    
+        <div class="shopping_list">
+            <div class="cart-table-th">
+                <ul>
+                    <li class="J_SelectAll1" id="J_SelectAll1">
+                        <img src="http://ahj.cm/h/templates/hua/images/checked.jpg" style="display: none;" width="16" height="16" style="" id="J_SelectAll1_img">
+                        <label><input type="checkbox" id="J_SelectAll1_checkbox"  > 全选</label></li>
+                    <li class="td-inner">商品</li>
+                    <li class="td-addcai">增加搭配</li>
+                    <li class="td-price">单价</li>
+                    <li class="td-price">优惠</li>
+                    <li class="td-order-num">数量</li>
+                    <li class="td-price">小计</li>
+                    <li class="th-op">操作</li>
+                </ul>
+            </div>
+
+                        <!-- 组合 -->
+        
+
+            <!-- 普通 -->
+        <div id="diecartshow" class="cart-table-th order diecartshow" style="border-top:1px solid #a9a9a9;margin-top:0px;">
+            <!-- <ul>
+                <li class="J_SelectAll1">
+                    <img src="http://ahj.cm/h/templates/hua/images/checked.jpg" width="16" height="16" style="" class="checked_checked">
+                    <input type="checkbox" class="singcartg" value="0|1035696" checked="checked" style="display: none;">
+                    <a href="/goods-10249.html" target="blank">
+                        <img src="http://ahj.cm/data/upload/g/1/2018/04/1_05768711248178014_220.jpg" width="86" height="86">
+                    </a>
+
+                </li>
+                <li class="td-inner">
+                    <p class="goods-name">爱到永恒</p>
+                    <p class="pcc">鲜花支数：33支</p>
+                    <p class="pcc">花材: 33朵红玫瑰，外围石竹梅点缀</p>
+                </li>
+                <li class="td-addcai">
+                    <p class="pcc" style="margin-top:3px;"><br></p>
+                </li>
+                <li class="td-price" style="line-height:20px;padding-top:50px;">
+                    ¥329.00
+                </li>
+                <li class="td-price yzhecart">
+                    
+                </li>
+                <li class="td-order-num" style="margin-top:10px">
+                    <span class="goods-num-jian fl">-</span>
+                    <input readonly="" type="text" class="goods-num fl" value="1">
+                    <span class="goods-num-jia fl" >+</span>
+                </li>
+                <li class="td-price" style="line-height:20px;padding-top:50px;">
+                    <b> ¥329.00</b>
+                </li>
+                <li class="th-op" style="line-height:20px;padding-top:50px;"><a href="#">删除</a>
+                </li>
+            </ul> -->
+            
+            </div>
+        <div class="th-bottom">
+            <div class="fl J_SelectAll2">
+                <img src="http://ahj.cm/h/templates/hua/images/checked.jpg"  style="display: none;" width="16" height="16"  id="J_SelectAll2_img">
+                <label><input type="checkbox" id="J_SelectAll2_checkbox" > 全选</label>
+                <a href="javascript:;" onclick="delcartll();">删除</a>
+                <span class="tipalie" style="display:none;color:#fc1d5e">选择你要删除的</span>
+            </div>
+            <div class="fl">
+                <a href="floorlist.html" style="font-size: 14px; color: red;">返回继续购买</a>
+            </div>
+            <div class="fr count_order">
+                共有<font>1</font>件商品，总计：<font class="sun_price">329.00</font>
+                <a href="" >去付款</a>
+                <a href="" class="cur" style="display: none;">去付款</a>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    
+ <!-- 底部开始 -->
+ <div class="footer_nav">
+    <div class="footer_links">
+        <div class="footer_ico h142">
+            <div class="footer_ico_box">
+                <ul>
+                    <li>国际超模冠军代言<br><span>国际超模冠军代言</span></li>
+                    <li>超模真人拍摄鲜花<br><span>国际超模冠军真人拍摄</span></li>
+                    <li>超级女声指定鲜花<br><span>超级女声（四川）鲜花赞助商</span></li>
+                     <li>商标专利 软件著作<br><span>商标、专利、软件著作权</span></li>
+                    <li>数百家自营实体店<br><span>全国数百家自营实体店</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="split1"></div>
+        <div class="links h235 bg_f5f5f5" style="margin-bottom: 10px; height: auto !important; overflow: hidden;">
+            <div class="w clearfix">
+                <dl class="link mr_l34">
+                    <dt><span>客户服务</span></dt>
+                    <dd>
+                        <a href="#" target="_blank" rel="nofollow">注册会员</a>
+                        <a href="#" target="_blank" rel="nofollow">服务声明</a>
+                        <a href="#" target="_blank" rel="nofollow">信息安全及保密条款</a>
+                        <a href="#" target="_blank" rel="nofollow">会员特权</a>
+                        <a href="#" target="_blank" rel="nofollow">关于我们</a>
+                    </dd>
+                </dl>
+                <dl class="link mr_l34">
+                    <dt><span>订花指南</span></dt>
+                    <dd>
+                        <a href="#" target="_blank" rel="nofollow">送花礼仪</a>
+                        <a href="#" target="_blank" rel="nofollow">购物须知</a>
+                        <a href="#" target="_blank" rel="nofollow">联系我们</a>
+                        <a href="#" target="_blank" rel="nofollow">常见问题</a>
+                        <a href="#" target="_blank" rel="nofollow">购物流程</a>
+                    </dd>
+                </dl>
+                                    <dl class="link mr_l34">
+                    <dt><span>支付方式</span></dt>
+                    <dd>
+                        <a href="#" target="_blank" rel="nofollow">在线支付</a>
+                        <a href="#" target="_blank" rel="nofollow">快捷支付</a>
+                        <a href="#" target="_blank" rel="nofollow">在线补款</a>
+                    </dd>
+                </dl>
+                 <dl class="link mr_l34">
+                    <dt><span>配送方式</span></dt>
+                    <dd>
+                        <a href="#" target="_blank" rel="nofollow">发票说明</a>
+                        <a href="#" target="_blank" rel="nofollow">配送说明</a>
+                        <a href="#" target="_blank" rel="nofollow">定时配送</a>
+                    </dd>
+                </dl>
+
+                <dl class="link mr_l34">
+                    <dt><span>售后服务</span></dt>
+                    <dd>
+                        <a href="#" target="_blank" rel="nofollow">订单查询</a>
+                        <a href="#" target="_blank" rel="nofollow">订单修改</a>
+                        <a href="#" target="_blank" rel="nofollow">关于投诉</a>
+                        <a href="#" target="_blank" rel="nofollow">订单取消</a>
+                    </dd>
+                </dl>
+                 <dl class="link">
+                <dt><span>关注微信更多惊喜</span></dt>
+                <dd>
+                    <img src="http://ahj.cm/h/templates/hua/images/old_ahj_wx.jpg" width="110" height="110">
+                </dd>
+                </dl>
+                 <dl class="link mr_l34" style="width: 136px;">
+                <dt><span>一个好玩的鲜花APP</span></dt>
+                <dd>
+                    <img src="http://ahj.cm/h/templates/hua/images/app_ahj_erweima.png" width="110" height="110">
+                </dd>
+            </div>
+
+           </div>
+    </div>
+    
+    <div class="footer_copyright">
+    <div class="h90 bg_0f0f0f pd_t24">
+            <div class="fcb0b0b0 mc0" style="text-align: center; ">
+            鲜花店客服中心电话：4006-728-555 配送鲜花时间9:00-22:00
+                        <br>©2007-2018 爱花居电子商务有限公司 版权所有，并保留所有权利。   www.aihuaju.com All rights reserved. 
+             /div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="js/jquery.js"></script>
+<script src="js/ShopCart.js"></script>
+</html>

@@ -57,7 +57,7 @@ gulp.task("watch", ()=>{
     gulp.watch("sass/*.scss",["html","sass"]);
     gulp.watch("js/*.js",["html","js"])
     gulp.watch("images/*.*",["html","images"])
-    gulp.watch("php/*.*",["html","php"])
+    gulp.watch("php/*/*.*",["html","php"])
 
  
 })
