@@ -1,3 +1,38 @@
+// 顶部导航
+.top-fixed-d {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 40px;
+    background: #ff397c;
+    z-index: 99999;
+    display: none;
+}
+.top-recommend-cate {
+    width: 1260px;
+    margin: 0 auto;
+}
+
+.top-fixed-logo {
+    position: relative;
+    top: -2px;
+    left: 24px;
+    display: inline-block;
+}
+.top-recommend-cate a:not(.top-fixed-logo) {
+    font-size: 15px;
+    display: inline-block;
+    padding: 10px 10px;
+    margin-left: 10px;
+    text-decoration: none;
+    color: #fff;
+}
+
+
+// 顶部导航结束
+
+
 header{
     background: #eee;
     height: 30px;

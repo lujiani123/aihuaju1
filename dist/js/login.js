@@ -1,3 +1,17 @@
+// 顶部导航
+$(window).scroll(function(){
+    var scroll=$(this).scrollTop()
+    if(scroll>=50){
+        $(".top-fixed-d").css({
+            "display":"block"
+        })
+    }else{
+        $(".top-fixed-d").css({
+            "display":"none"
+        })
+    }
+})
+
 $(".logn_pt span").click(function(){
     var index=$(this).index()
     if($(".login").eq(index).hasClass("message")){

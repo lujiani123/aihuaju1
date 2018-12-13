@@ -1,3 +1,18 @@
+// 顶部导航
+$(window).scroll(function(){
+    var scroll=$(this).scrollTop()
+    if(scroll>=50){
+        $(".top-fixed-d").css({
+            "display":"block"
+        })
+    }else{
+        $(".top-fixed-d").css({
+            "display":"none"
+        })
+    }
+})
+
+
 // 手机号验证
 
 $("#user_name").blur(function(){

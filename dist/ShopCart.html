@@ -9,6 +9,27 @@
     <link rel="stylesheet" href="./css/ShopCart.css">
 </head>
 <body>
+      <!-- 顶部导航 -->
+      <div class="top-fixed-d clearfix">
+            <div class="top-recommend-cate" style="white-space: nowrap;">
+            <a class="top-fixed-logo" href="index.html"><img width="80px" height="22px" style="opacity:0.9" src="http://ahj.cm/h/templates/hua/images/ahj_t_f.png"></a>
+                <a href="/shengri.html" style="margin-left:50px">生日鲜花</a>
+            <a href="getGirl.html">送女友</a>
+            <a href="getGirl.html">约会</a>
+            <a href="getGirl.html">追求表白</a>
+            <a href="getGirl.html">求婚</a>
+            <a href="getGirl.html">送老婆</a>
+            <a href="#">玫瑰专区</a>
+            <a href="#">恋爱纪念日</a>
+            <a href="#">结婚纪念日</a>
+            <a href="#">道歉鲜花</a>
+            <a href="#">送闺密</a>
+            <a href="#">送长辈</a>
+            </div>
+            </div>
+    
+    
+        <!-- 顶部导航结束 -->
           <!-- 头部导航开始-->
    <header>
     <div class="nav">
@@ -39,9 +60,9 @@
             <span class="fr userbartop"> 
                 <a href="#">欢迎来到爱花居首页</a>
                 <i></i>
-                <a href="#">登录</a>
+                <a href="login.html">登录</a>
                 <i></i>
-                <a href="#" >注册</a>
+                <a href="registe.html" >注册</a>
                 <i></i>
                 <a class="cart" href="ShopCart.html" >
                     <em></em>
@@ -165,14 +186,14 @@
             <div class="fl J_SelectAll2">
                 <img src="http://ahj.cm/h/templates/hua/images/checked.jpg"  style="display: none;" width="16" height="16"  id="J_SelectAll2_img">
                 <label><input type="checkbox" id="J_SelectAll2_checkbox" > 全选</label>
-                <a href="javascript:;" onclick="delcartll();">删除</a>
+                <a href="" id="clear">清空购物车</a>
                 <span class="tipalie" style="display:none;color:#fc1d5e">选择你要删除的</span>
             </div>
             <div class="fl">
                 <a href="floorlist.html" style="font-size: 14px; color: red;">返回继续购买</a>
             </div>
             <div class="fr count_order">
-                共有<font>1</font>件商品，总计：<font class="sun_price">329.00</font>
+                共有<font id="addcount">1</font>件商品，总计：<font class="sun_price">329.00</font>
                 <a href="" >去付款</a>
                 <a href="" class="cur" style="display: none;">去付款</a>
             </div>

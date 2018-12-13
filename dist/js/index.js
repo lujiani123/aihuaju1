@@ -1,3 +1,28 @@
+// 顶部导航
+$(window).scroll(function(){
+    var scroll=$(this).scrollTop()
+    if(scroll>=50){
+        $(".top-fixed-d").css({
+            "display":"block"
+        })
+    }else{
+        $(".top-fixed-d").css({
+            "display":"none"
+        })
+    }
+})
+
+
+
+
+
+// 购物车数量
+// console.log(JSON.parse(localStorage.infos))
+var infos=JSON.parse(localStorage.infos)
+var count=JSON.parse(localStorage.infos).length
+
+$(".count").html(count)
+
 $(function(){
 
 // 鲜花分类开始

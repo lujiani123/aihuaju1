@@ -1,3 +1,31 @@
+
+// 顶部导航
+$(window).scroll(function(){
+    var scroll=$(this).scrollTop()
+    if(scroll>=50){
+        $(".top-fixed-d").css({
+            "display":"block"
+        })
+    }else{
+        $(".top-fixed-d").css({
+            "display":"none"
+        })
+    }
+})
+
+
+
+// 购物车数量
+// console.log(JSON.parse(localStorage.infos))
+var count=0;
+if(localStorage.infos==null){
+      count=0;
+}else{
+    var infos=JSON.parse(localStorage.infos)
+    count=JSON.parse(localStorage.infos).length
+}
+$(".count").html(count)
+
 $.ajax("./php/flower/xianhua.json")
 .then(function(res){
     // console.log(res)
@@ -167,7 +195,7 @@ function renderPage5(json){
 
 // 小图
 function renderPage3(json){
-    console.log(json)
+    // console.log(json)
     if(cookie("id")){
         var id=cookie("id")
         var html="";
@@ -304,9 +332,9 @@ function addCart(){
     $("#btn_add_cart").click(function(){
         if(cookie("id")){
             id=cookie("id")
-            console.log(id)
+            // console.log(id)
             var good={}
-            console.log(localStorage.infos)
+            // console.log(localStorage.infos)
             if(localStorage.infos){
                 var goods=JSON.parse(localStorage.infos)
                 // console.log(goods)

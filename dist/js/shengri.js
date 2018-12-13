@@ -1,5 +1,28 @@
 
+// 顶部导航
+$(window).scroll(function(){
+    var scroll=$(this).scrollTop()
+    if(scroll>=50){
+        $(".top-fixed-d").css({
+            "display":"block"
+        })
+    }else{
+        $(".top-fixed-d").css({
+            "display":"none"
+        })
+    }
+})
 
+// 购物车数量
+// console.log(JSON.parse(localStorage.infos))
+var count=0;
+if(localStorage.infos==null){
+      count=0;
+}else{
+    var infos=JSON.parse(localStorage.infos)
+    count=JSON.parse(localStorage.infos).length
+}
+$(".count").html(count)
 // 生日鲜花
 $.ajax("./php/birthday/birthday_floor.json")
 .then(function(res){

@@ -1,4 +1,27 @@
+// 顶部导航
+$(window).scroll(function(){
+    var scroll=$(this).scrollTop()
+    if(scroll>=50){
+        $(".top-fixed-d").css({
+            "display":"block"
+        })
+    }else{
+        $(".top-fixed-d").css({
+            "display":"none"
+        })
+    }
+})
 
+// 购物车数量
+// console.log(localStorage.infos==null) 
+var count=0;
+if(localStorage.infos==null){
+      count=0;
+}else{
+    var infos=JSON.parse(localStorage.infos)
+    count=JSON.parse(localStorage.infos).length
+}
+$(".count").html(count)
 // 展开收起
 
 $("#moreattr .sm-wrap").click(function(){
@@ -16,7 +39,7 @@ $("#moreattr .sm-wrap").click(function(){
 // 列表渲染
 $.ajax("./php/flower/xianhua.json")
 .then(function(res){
-    console.log(res)
+    // console.log(res)
     renderPage(res)
     refreshto()
 
