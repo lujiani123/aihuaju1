@@ -78,3 +78,37 @@ $("#password_confirm").blur(function(){
         $("#conerror").addClass("error").html("输入的两次密码不一致")
     }
 })
+
+$("#submit_btn").on("click",registe)
+function registe(){
+    // console.log(111)
+   
+        var username=$("#user_name").val()
+        var password=$("#password").val()
+        console.log(!username)
+        if(username&&password){
+        var options={
+            url:"http://localhost:8888/api/users/register",
+            type:"POST",
+            data:{
+                username : username,
+                password : password
+              }
+        }
+        $.ajax(options)
+        .then(function(res){
+            // console.log(res)
+            if(res.statu=="success"){
+                location.href = "http://localhost:8888/success.html"
+            }else{
+                alert("用户名重复");
+              }
+
+        },function(err){
+            console.log(err,"错误")
+          })
+    }else{
+        alert("账号或者密码不能为空")
+    }
+    
+}

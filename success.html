@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册成功</title>
+    <style>
+    p{
+        font-size: 20px;
+        /* width: 300px; */
+        margin: 20px;
+        text-align: center
+
+    }
+    a{
+        color: cadetblue;
+        font-size: 24px
+    }
+    span{
+        font-size: 22px;
+        color: red
+    }
+    </style>
+</head>
+<body>
+    <p>
+        注册成功，请
+            <a href="login.html">
+                    登录！
+                </a>
+           
+                <span  id="second">
+                    5
+                </span>
+              
+                        秒后自动跳转到登陆界面
+                
+    </p>
+   
+    
+</body>
+<script>
+  var nSecond  = 5;
+        var timer = setInterval(function(){
+            nSecond --;
+            if(nSecond == 0){
+                // 页面跳转;
+                location.href = "http://localhost:8888/login.html"
+                // 清空定时器;
+                clearInterval(timer);
+            }
+            second.innerHTML = nSecond;
+
+            // console.log(1);
+        },1000)
+
+
+
+        
+</script>
+</html>

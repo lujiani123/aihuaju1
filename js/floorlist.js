@@ -81,6 +81,12 @@ $.ajax("./php/flower/xianhua.json")
      document.querySelector("#list_floor").innerHTML=html
  }
 
+//  瀑布流
+$(window).scroll(function(){
+    var scroll=$(this).scrollTop()
+    // if(scroll)
+
+})
 
 //  跳转详情页
 function refreshto(){

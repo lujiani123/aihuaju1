@@ -1,3 +1,32 @@
+// 免登陆
+function token(){
+    var options = {
+    url:"http://localhost:8888/api/users/token",
+    type:"POST"
+    }
+    $.ajax(options)
+    .then((res)=>{
+    console.log(res);
+    if(res.status == "success"){
+        $(".member_avatar img").attr("src","./images/tou.jpg").css({
+            "box-shadow":"1px 1px 2px #888888",
+            "border-radius":"50%"
+        })
+        $("#logon").html('<p class="secede" style="width:100px;height=30px;background:red;color:#fff;margin:0 auto">退出登录</p>');
+        // renderPage()
+        $(".secede").click(function(){
+            $.cookie("_ga","",{expires: -1})
+           console.log($.cookie())
+        })
+       
+    }else{
+        $("#logon").html('<a target="_blank" href="login.html" style="margin-right: 10px;">登录</a>  <a target="_blank" href="#">注册</a>');
+    }
+    })
+}
+token()
+
+
 // 顶部导航
 $(window).scroll(function(){
     var scroll=$(this).scrollTop()

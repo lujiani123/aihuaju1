@@ -23,26 +23,15 @@ gulp.task('connect', function() {
         livereload:true,
    
         middleware:function(connect , opt){
-            // var Proxy = require('gulp-connect-proxy');
-            // opt.route = '/proxy';
-            // var proxy = new Proxy(opt);
-            // return [proxy];
+           
             return [
-                // proxy('/api',  {
-                //       target: 'http://www.ismei.net/API/ProductsHandler.ashx?action=LoadProducts&pageSize=342&pageIndex=1&categoryId=1&valueStr=66_436&keywords=&sortOrderBy=&sortOrder=&brand=',
-                //       changeOrigin:true,
-                //       pathRewrite:{
-                //             '/api' : ""
-                //       }
-                // }),
-                proxy('/mogu', {
-                      target: 'https://list.mogujie.com',
-                      changeOrigin: true,
-                      pathRewrite:{
-                            '^/mogu' : ""
-                      }
-                })
-          ]
+                     proxy("/api",{
+                        target:"http://localhost:3000",
+                        pathRewrite: {
+                            '^/api' : '/',     // rewrite path
+                        }
+                    })
+                ]
         }
     })
 });

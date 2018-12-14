@@ -38,12 +38,14 @@ $.ajax("./php/flower/xianhua.json")
     lazyLoading()
     addHua()
     ChoiceStyle()
-    goodNum()
+    // goodNum()
     Magnifier()
     btnBanner()
     addCart()
+    jiashu(res)
+    jianshu(res)
 })
-
+console.log(localStorage.infos)
 function renderPage1(json){
         if(cookie("id")){
             var id=cookie("id")
@@ -250,23 +252,61 @@ function addHua(){
 }
 
 // 购买数量
-function goodNum(){
-    var good_num=Number($("#good_num").val())
-    $("#reduce").click(function(){
+// function goodNum(){
+//     var good_num=Number($("#good_num").val())
+//     $("#reduce").click(function(){
         
-        if(good_num==1) return false;
-        good_num--
-        $("#good_num").val(good_num)
+//         if(good_num==1) return false;
+//         good_num--
+//         $("#good_num").val(good_num)
         
-    })
-    $("#add").click(function(){
-        good_num++
-        $("#good_num").val(good_num)
+//     })
+//     $("#add").click(function(){
+//         good_num++
+//         $("#good_num").val(good_num)
 
         
+//     })
+// }
+function jianshu(json){
+    // var good_num=Number($("#good_num").val())
+    // if(good_num==1) return false;
+    // good_num--
+  
+    $("#reduce").click(function(){
+        var infos=JSON.parse(localStorage.infos)
+   for(var i=0; i<json.length;i++){
+        for(var k=0;k<infos.length;k++){
+            if(json[i].id===infos[k].id){
+                if(infos[k].num==1) return false
+                infos[k].num--
+                //  location.reload()
+                $("#good_num").val(infos[k].num)
+
+            }
+        }
+    }
+    localStorage.infos=JSON.stringify(infos)
     })
 }
 
+function jiashu(json){
+    $("#add").click(function(){
+        var infos=JSON.parse(localStorage.infos)
+        console.log(infos)
+   for(var i=0; i<json.length;i++){
+        for(var k=0;k<infos.length;k++){
+            if(json[i].id===infos[k].id){
+                infos[k].num++
+            //   location.reload()
+            $("#good_num").val(infos[k].num)
+
+            }
+        }
+    }
+    localStorage.infos=JSON.stringify(infos)
+    })
+}
 
 // // 放大镜
 function Magnifier(){
@@ -279,7 +319,7 @@ function Magnifier(){
         $("#Magnifier_shop_S").stop().fadeIn(500);
         $("#Magnifier_shop_S").mousemove(function(e) {
             var e = e || event;
-            $(".Magnifier_shop_B").css({ "transform": "scale(1,1)", "left": "440px" })
+            $(".Magnifier_shop_B").css({ ",l": "scale(1,1)", "left": "440px" })
             var x = e.pageX - $(this).width() / 2 - $(".Magnifier_shop").offset().left;
             var y = e.pageY - $(this).height() / 2 - $(".Magnifier_shop").offset().top;
             if(x < 0) {
@@ -332,9 +372,8 @@ function addCart(){
     $("#btn_add_cart").click(function(){
         if(cookie("id")){
             id=cookie("id")
-            // console.log(id)
+            console.log(id)
             var good={}
-            // console.log(localStorage.infos)
             if(localStorage.infos){
                 var goods=JSON.parse(localStorage.infos)
                 // console.log(goods)
@@ -344,10 +383,7 @@ function addCart(){
                        bstop=false;
                        goods[key].num=1+parseInt(goods[key].num)
                        localStorage.infos=JSON.stringify(goods);
-
                    }
-
-
                 }
                 if(bstop){
                     good.num=1;
@@ -360,7 +396,6 @@ function addCart(){
                 var goods=[];
                 good.num=1;
                 good.id=id
-                // console.log(good)
                 goods.push(good)
                 localStorage.infos=JSON.stringify(goods)
             }

@@ -69,3 +69,29 @@ $("#vcode_btn").click(function() {
         }
     }, 1000)
 })
+
+
+$("#submit_log").on("click",login)
+function login(){
+    var username=$("#sms_user_name1").val()
+    var password=$("#password").val()
+    var options={
+        url:"http://localhost:8888/api/users/login",
+        type:"POST",
+        data:{
+            username:username,
+            password:password
+        }
+    }
+    $.ajax(options)
+    .then(function(res){
+        // console.log(res)
+        if(res.status=="success"){
+            // console.log("登录成功")
+            location.href="index.html"
+        }else{
+            alert("账号或者密码错误")
+        }
+    })
+
+}

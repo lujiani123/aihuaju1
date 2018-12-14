@@ -19,9 +19,11 @@ $.ajax("./php/flower/xianhua.json")
     clearGood()
     renderPage(res)
     choice()
-    goodNum()
+    // goodNum()
     addCount()
     addPrice(res)
+    jianshu(res)
+    jiashu(res)
     
 })
 
@@ -29,6 +31,7 @@ function renderPage(json){
     // console.log(json)
     var html="";
     var infos=JSON.parse(localStorage.infos)
+    console.log(infos)
     for(var i=0;i<json.length;i++){
         if(infos){
             for(var k in infos){
@@ -60,12 +63,12 @@ function renderPage(json){
                                 
                             </li>
                             <li class="td-order-num" style="margin-top:10px">
-                                <span class="goods-num-jian fl" >-</span>
+                                <span class="goods-num-jian fl" data-id=${json[i].id} >-</span>
                                 <input readonly="" type="text" class="goods-num fl" id="goods-num" value=${infos[k].num}>
-                                <span class="goods-num-jia fl"  >+</span>
+                                <span class="goods-num-jia fl" data-id=${json[i].id}  >+</span>
                             </li>
                             <li class="td-price" style="line-height:20px;padding-top:50px;">
-                                <b> ¥${json[i].price*infos[k].num}</b>
+                                <b id="price"> ¥${json[i].price*infos[k].num}</b>
                             </li>
                             <li class="th-op" style="line-height:20px;padding-top:50px;">
                                 <a href="#" id="clear_good" data-id=${json[i].id} clasa="clear">删除</a>
@@ -169,39 +172,10 @@ function choice(){
 }
 
 // 数量
-// 购买数量
-function goodNum(){
-//    console.log($(".goods-num"))、
-// console.log(localStorage.infos)
-var good=JSON.parse(localStorage.infos)
-// console.log(good)
-for(var i=0;i<good.length;i++){
 
-}
-$(".goods-num-jian").click(function(e){
-    console.log($(this))
-    var id=$(this).attr("data-id")
-    console.log(id)
-    var good_num=$(this).next().val()    
-    if(good_num==1) return false;
-    good_num--
-    $(this).next().val(good_num)
- 
-    
-})
-$(".goods-num-jia").click(function(){
-    var good_num=$(this).prev().val()
-    good_num++
-    $(this).prev().val(good_num)
 
-    
-})
-
-  
-}
 // 删除
 function clearGood(){
-   
     $("#diecartshow").on("click","#clear_good",clearThis)
    
 }
@@ -219,8 +193,9 @@ function clearThis(){
             goods.splice(j,1)
         }
     }
+    $(this).parent().parent().remove()
     localStorage.infos=JSON.stringify(goods);
-    location.reload()
+    // location.reload()
 }
 
 // 清空购物车
@@ -239,25 +214,82 @@ function addCount(){
 // 总计价钱
 function addPrice(json){
    var infos=JSON.parse(localStorage.infos);
-//    console.log(json)
-//    console.log(infos)
    var count=0;
    var arr=[]
    for(var i=0; i<json.length;i++){
        for(var k=0;k<infos.length;k++){
            if(json[i].id===infos[k].id){
-            // console.log(json[i].price,infos[k].num)
            arr.push(json[i].price*infos[k].num)
-
-            // console.log(json[i].price*infos[k].num)
            }
          
        }
 
    }
-//    console.log(arr)
    for(var j=0;j<arr.length;j++){
    count+=Number(arr[j])
    }
   $(".sun_price").html("￥"+count)
+}
+
+// 购买数量
+function jianshu(json){
+    $(".goods-num-jian").click(function(){
+        var infos=JSON.parse(localStorage.infos)
+        var id=$(this).attr("data-id")
+        console.log(id)
+        var arr=[]
+        var count=0;
+        for(var i=0; i<json.length;i++){
+                for(var k=0;k<infos.length;k++){
+                    if(json[i].id===infos[k].id&&json[i].id==id&&infos[k].id==id){
+                        if(infos[k].num==1) return false
+                        infos[k].num--
+                        $(this).next().val(infos[k].num)
+                        var price=json[i].price*infos[k].num
+                        $(this).parent().next().children().html("￥"+price)
+            
+                    }
+                  if(json[i].id===infos[k].id){
+                    var addprice=json[i].price*infos[k].num
+                    arr.push(addprice)
+                  }
+                }
+             
+            // console.log(addprice)
+
+            }   
+            // console.log(arr)
+            for(var j=0;j<arr.length;j++){
+                count+=Number(arr[j])
+                }
+               $(".sun_price").html("￥"+count)
+        localStorage.infos=JSON.stringify(infos)
+    })
+}
+function jiashu(json){
+    $(".goods-num-jia").click(function(){
+        var infos=JSON.parse(localStorage.infos)
+        var id=$(this).attr("data-id")
+        var arr=[]
+        var count=0;
+        for(var i=0; i<json.length;i++){
+                for(var k=0;k<infos.length;k++){
+                    if(json[i].id===infos[k].id&&json[i].id==id&&infos[k].id==id){
+                        infos[k].num++
+                    $(this).prev().val(infos[k].num)
+                    var price=json[i].price*infos[k].num
+                    $(this).parent().next().children().html("￥"+price)
+                }
+                if(json[i].id===infos[k].id){
+                    var addprice=json[i].price*infos[k].num
+                    arr.push(addprice)
+                  }
+            }
+        }
+        for(var j=0;j<arr.length;j++){
+            count+=Number(arr[j])
+            }
+           $(".sun_price").html("￥"+count)
+        localStorage.infos=JSON.stringify(infos)
+    })
 }

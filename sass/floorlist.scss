@@ -477,6 +477,7 @@ header .nav .three:hover .two-code3{
 .good_list .list_order {
     width: 1200px;
     height: auto;
+    margin: 0 auto;
     overflow: hidden;
     ul {
         width: 226px;
@@ -517,6 +518,7 @@ header .nav .three:hover .two-code3{
     width: 1200px;
     height: auto;
     overflow: hidden;
+    margin: 0 auto;
     ul {
         width: 1200px;
         height: auto;
@@ -634,16 +636,19 @@ header .nav .three:hover .two-code3{
 }
 .footer_nav .footer_ico .footer_ico_box ul {
     padding-top: 42px;
+    padding-left: 90px;
 }
-.footer_nav .footer_ico .footer_ico_box ul li {
+.footer_nav .footer_ico .footer_ico_box ul li{
     float: left;
     font-size: 18px;
     font-family: "Microsoft Yahei";
     color: #333;
     line-height: 24px;
-
     padding-left: 90px;
     padding-top: 8px;
+}
+.footer_nav .footer_ico .footer_ico_box ul li.frist{
+    padding-left: 0;
 }
 .footer_nav .footer_ico .footer_ico_box ul li span {
     font-size: 12px;

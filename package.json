@@ -9,5 +9,8 @@
     "gulp-sass-china": "^3.1.0",
     "gulp-uglify": "^3.0.1",
     "http-proxy-middleware": "^0.19.1"
+  },
+  "dependencies": {
+    "mongodb": "^3.1.10"
   }
 }
